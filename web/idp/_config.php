@@ -235,6 +235,9 @@ class IdpConfig
         $idpProvider->add(
             \LightSaml\Model\Metadata\EntityDescriptor::load(__DIR__.'/lightsaml.local.sp.xml')
         );
+        $idpProvider->add(
+            \LightSaml\Model\Metadata\EntityDescriptor::load(__DIR__.'/localhost-lightsaml-spbundle.xml')
+        );
 
         return $idpProvider;
     }
