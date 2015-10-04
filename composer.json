@@ -6,12 +6,6 @@
     "autoload": {
         "psr-0": { "LightSaml\\Idp\\": "src/" }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "d:/www/home/lightSAML/lightSAML"
-        }
-    ],
     "require": {
         "php": ">=5.5.1",
         "lightsaml/lightsaml": "*"
