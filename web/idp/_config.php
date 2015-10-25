@@ -4,7 +4,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 class IdpConfig
 {
-    const OWN_ENTITY_ID = 'https://lightsaml.local/idp';
+    const OWN_ENTITY_ID = 'http://localhost/lightSAML/lightSAML-IDP/web/idp';
 
     /** @var  \SpConfig */
     private static $instance;
@@ -200,9 +200,9 @@ class IdpConfig
     private function buildOwnCredential()
     {
         $ownCredential = new \LightSaml\Credential\X509Credential(
-            (new \LightSaml\Model\Security\X509Certificate())
+            (new \LightSaml\Credential\X509Certificate())
                 ->loadPem(file_get_contents(__DIR__.'/saml.crt')),
-            \LightSaml\Model\Security\KeyHelper::createPrivateKey(__DIR__.'/saml.key', null, true)
+            \LightSaml\Credential\KeyHelper::createPrivateKey(__DIR__.'/saml.key', null, true)
         );
         $ownCredential
             ->setEntityId(self::OWN_ENTITY_ID)
@@ -212,11 +212,11 @@ class IdpConfig
     }
 
     /**
-     * @param \LightSaml\Model\Security\X509Certificate $certificate
+     * @param \LightSaml\Credential\X509Certificate $certificate
      *
      * @return \LightSaml\Provider\EntityDescriptor\EntityDescriptorProviderInterface
      */
-    private function buildOwnEntityDescriptorProvider(\LightSaml\Model\Security\X509Certificate $certificate)
+    private function buildOwnEntityDescriptorProvider(\LightSaml\Credential\X509Certificate $certificate)
     {
         return new \LightSaml\Builder\EntityDescriptor\SimpleEntityDescriptorBuilder(
             self::OWN_ENTITY_ID,
@@ -233,10 +233,10 @@ class IdpConfig
     {
         $idpProvider = new \LightSaml\Store\EntityDescriptor\FixedEntityDescriptorStore();
         $idpProvider->add(
-            \LightSaml\Model\Metadata\EntityDescriptor::load(__DIR__.'/lightsaml.local.sp.xml')
+            \LightSaml\Model\Metadata\EntityDescriptor::load(__DIR__.'/localhost-lightsaml-demosp.xml')
         );
         $idpProvider->add(
-            \LightSaml\Model\Metadata\EntityDescriptor::load(__DIR__.'/localhost-lightsaml-spbundle.xml')
+            \LightSaml\Model\Metadata\EntityDescriptor::load(__DIR__.'/localhost-lightsaml-lightsaml.xml')
         );
 
         return $idpProvider;

@@ -46,7 +46,7 @@ class SubjectConfirmationAction extends AbstractAssertionAction
     protected function doExecute(AssertionContext $context)
     {
         $profileContext = $context->getProfileContext();
-        $inboundMessage = $profileContext->getInboundMessage();
+        $inboundMessage = $profileContext->getInboundContext()->getMessage();
         $endpoint = $profileContext->getEndpoint();
 
         $data = new SubjectConfirmationData();

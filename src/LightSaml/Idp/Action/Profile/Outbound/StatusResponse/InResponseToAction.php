@@ -18,7 +18,7 @@ class InResponseToAction extends AbstractProfileAction
      */
     protected function doExecute(ProfileContext $context)
     {
-        if ($context->getInboundMessage()) {
+        if ($context->getInboundContext()->getMessage()) {
             MessageContextHelper::asStatusResponse($context->getOutboundContext())->setInResponseTo(
                 MessageContextHelper::asSamlMessage($context->getInboundContext())->getID()
             );
