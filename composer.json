@@ -4,7 +4,10 @@
     "type": "library",
     "description": "Light SAML2 IDP php library",
     "autoload": {
-        "psr-0": { "LightSaml\\Idp\\": "src/" }
+        "psr-0": {
+            "LightSaml\\Idp\\Tests\\": "tests/",
+            "LightSaml\\Idp\\": "src/"
+        }
     },
     "require": {
         "php": ">=5.5.1",
