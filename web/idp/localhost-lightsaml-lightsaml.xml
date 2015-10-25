@@ -15,6 +15,6 @@
         </ds:X509Data>
       </ds:KeyInfo>
     </KeyDescriptor>
-    <AssertionConsumerService index="0" isDefault="false" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://localhost/lightsaml/lightSAML/web/sp/acs.php"/>
+    <AssertionConsumerService index="0" isDefault="false" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost/lightsaml/lightSAML/web/sp/acs.php"/>
   </SPSSODescriptor>
 </EntityDescriptor>
