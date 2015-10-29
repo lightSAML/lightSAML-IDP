@@ -39,3 +39,5 @@
 
 /web/idp/idp.log
 /composer.lock
+/*.phar
+/*.cache

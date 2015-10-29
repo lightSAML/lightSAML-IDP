@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Action\Assertion\Outbound;
 
 use LightSaml\Action\Assertion\AbstractAssertionAction;
@@ -9,7 +18,7 @@ use LightSaml\Provider\Attribute\AttributeValueProviderInterface;
 use Psr\Log\LoggerInterface;
 
 /**
- * Creates AttributeStatement and sets attribute values provided by given attribute value provider
+ * Creates AttributeStatement and sets attribute values provided by given attribute value provider.
  */
 class AttributeAction extends AbstractAssertionAction
 {

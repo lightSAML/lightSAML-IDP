@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Action\Assertion\Outbound;
 
 use LightSaml\Action\Assertion\AbstractAssertionAction;
@@ -10,7 +19,7 @@ use LightSaml\Model\Assertion\Conditions;
 use Psr\Log\LoggerInterface;
 
 /**
- * Creates Conditions and AudienceRestriction
+ * Creates Conditions and AudienceRestriction.
  */
 class ConditionsAction extends AbstractAssertionAction
 {

@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Action\Assertion\Outbound;
 
 use LightSaml\Action\Assertion\AbstractAssertionAction;
@@ -9,7 +18,7 @@ use LightSaml\Resolver\Signature\SignatureResolverInterface;
 use Psr\Log\LoggerInterface;
 
 /**
- * If TrustOptions::getSignAssertions is true, sets
+ * If TrustOptions::getSignAssertions is true, sets.
  */
 class SignAssertionAction extends AbstractAssertionAction
 {
@@ -46,7 +55,7 @@ class SignAssertionAction extends AbstractAssertionAction
                         $signature->getCertificate()->getFingerprint()
                     ),
                     LogHelper::getActionContext($context, $this, array(
-                        'certificate' => $signature->getCertificate()->getInfo()
+                        'certificate' => $signature->getCertificate()->getInfo(),
                     ))
                 );
                 $context->getAssertion()->setSignature($signature);

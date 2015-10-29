@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Action\Profile\Outbound\Response;
 
 use LightSaml\Action\ActionInterface;
@@ -13,7 +22,7 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Foreach of the given assertion actions, creates an assertion context, executes it, and if it has an assertion,
- * adds it to the Response in outbound context
+ * adds it to the Response in outbound context.
  */
 class HandleAssertionsAction extends AbstractProfileAction implements CompositeActionInterface
 {
