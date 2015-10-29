@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Action\Assertion\Outbound;
 
 use LightSaml\Action\Assertion\AbstractAssertionAction;
@@ -12,7 +21,7 @@ use LightSaml\SamlConstants;
 use Psr\Log\LoggerInterface;
 
 /**
- * Creates SubjectConfirmation and creates Subject if not already created
+ * Creates SubjectConfirmation and creates Subject if not already created.
  */
 class SubjectConfirmationAction extends AbstractAssertionAction
 {

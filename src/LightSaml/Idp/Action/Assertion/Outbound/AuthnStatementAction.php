@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Action\Assertion\Outbound;
 
 use LightSaml\Action\Assertion\AbstractAssertionAction;
@@ -11,7 +20,7 @@ use LightSaml\Provider\Session\SessionInfoProviderInterface;
 use Psr\Log\LoggerInterface;
 
 /**
- * Creates AuthnStatement and sets values provided by session info provider
+ * Creates AuthnStatement and sets values provided by session info provider.
  */
 class AuthnStatementAction extends AbstractAssertionAction
 {

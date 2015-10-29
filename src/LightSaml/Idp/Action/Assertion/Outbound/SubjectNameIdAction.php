@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Action\Assertion\Outbound;
 
 use LightSaml\Action\Assertion\AbstractAssertionAction;
@@ -9,7 +18,7 @@ use LightSaml\Provider\NameID\NameIdProviderInterface;
 use Psr\Log\LoggerInterface;
 
 /**
- * Creates Subject if not already created, and sets NameID to it with the value provided by name id provider
+ * Creates Subject if not already created, and sets NameID to it with the value provided by name id provider.
  */
 class SubjectNameIdAction extends AbstractAssertionAction
 {

@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the LightSAML-IDP package.
+ *
+ * (c) Milos Tomic <tmilos@lightsaml.com>
+ *
+ * This source file is subject to the GPL-3 license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace LightSaml\Idp\Builder\Action\Profile\SingleSignOn\Idp;
 
 use LightSaml\Action\Profile\Inbound\Message\ResolvePartyEntityIdAction;
