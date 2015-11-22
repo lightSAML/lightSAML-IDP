@@ -1,10 +1,10 @@
 <?php
 
-require_once __DIR__ . '/../../vendor/autoload.php';
+require_once __DIR__.'/../../vendor/autoload.php';
 
 class IdpConfig
 {
-    const OWN_ENTITY_ID = 'http://localhost/lightSAML/lightSAML-IDP/web/idp';
+    const OWN_ENTITY_ID = 'https://localhost/lightSAML/lightSAML-IDP/web/idp';
 
     /** @var  \SpConfig */
     private static $instance;
@@ -17,7 +17,7 @@ class IdpConfig
     public static function current()
     {
         if (null == self::$instance) {
-            self::$instance = new static;
+            self::$instance = new static();
         }
 
         return self::$instance;
@@ -247,7 +247,7 @@ class IdpConfig
      */
     private function buildLogger()
     {
-        $logger = new \Monolog\Logger('lightsaml', array(new \Monolog\Handler\StreamHandler(__DIR__ . '/idp.log')));
+        $logger = new \Monolog\Logger('lightsaml', array(new \Monolog\Handler\StreamHandler(__DIR__.'/idp.log')));
 
         return $logger;
     }
