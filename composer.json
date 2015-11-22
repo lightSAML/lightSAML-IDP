@@ -27,6 +27,6 @@
         "bin-dir": "bin"
     },
     "bin": ["app/lightsaml"],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "minimum-stability": "dev"
 }
