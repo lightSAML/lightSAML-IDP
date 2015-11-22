@@ -4,7 +4,7 @@ require_once __DIR__.'/../../vendor/autoload.php';
 
 class IdpConfig
 {
-    const OWN_ENTITY_ID = 'https://localhost/lightSAML/lightSAML-IDP/web/idp';
+    const OWN_ENTITY_ID = 'https://localhost/lightSAML/lightSAML-IDP';
 
     /** @var  \SpConfig */
     private static $instance;
