@@ -42,6 +42,9 @@ class SsoIdpSendResponseProfileBuilder extends AbstractProfileBuilder
     /** @var  SamlMessage */
     private $message;
 
+    /** @var string */
+    private $relayState;
+
     /**
      * @param BuildContainerInterface  $buildContainer
      * @param ActionBuilderInterface[] $assertionBuilders
@@ -101,6 +104,18 @@ class SsoIdpSendResponseProfileBuilder extends AbstractProfileBuilder
     public function setMessage($message)
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    /**
+     * @param string $relayState
+     *
+     * @return SsoIdpSendResponseProfileBuilder
+     */
+    public function setRelayState($relayState)
+    {
+        $this->relayState = $relayState;
 
         return $this;
     }
@@ -166,6 +181,10 @@ class SsoIdpSendResponseProfileBuilder extends AbstractProfileBuilder
 
         if ($this->message) {
             $result->getInboundContext()->setMessage($this->message);
+        }
+
+        if ($this->relayState) {
+            $result->setRelayState($this->relayState);
         }
 
         return $result;
