@@ -18,7 +18,7 @@ use Psr\Log\LoggerInterface;
 
 class AssertionVersionAction extends AbstractAssertionAction
 {
-    /** @var  string */
+    /** @var string */
     private $version;
 
     /**

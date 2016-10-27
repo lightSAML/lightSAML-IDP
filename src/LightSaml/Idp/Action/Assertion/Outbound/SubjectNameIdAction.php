@@ -22,7 +22,7 @@ use Psr\Log\LoggerInterface;
  */
 class SubjectNameIdAction extends AbstractAssertionAction
 {
-    /** @var  NameIDProviderInterface */
+    /** @var NameIDProviderInterface */
     protected $nameIdProvider;
 
     /**

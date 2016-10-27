@@ -30,16 +30,16 @@ class SsoIdpSendResponseProfileBuilder extends AbstractProfileBuilder
     /** @var string */
     private $entityId;
 
-    /** @var  EntityDescriptor */
+    /** @var EntityDescriptor */
     private $partyEntityDescriptor;
 
-    /** @var  TrustOptions */
+    /** @var TrustOptions */
     private $partyTrustOptions;
 
-    /** @var  Endpoint */
+    /** @var Endpoint */
     private $endpoint;
 
-    /** @var  SamlMessage */
+    /** @var SamlMessage */
     private $message;
 
     /** @var string */

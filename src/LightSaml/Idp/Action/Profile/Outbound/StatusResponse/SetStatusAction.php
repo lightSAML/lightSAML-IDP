@@ -24,7 +24,7 @@ class SetStatusAction extends AbstractProfileAction
     /** @var string */
     protected $statusCode;
 
-    /** @var  string */
+    /** @var string */
     protected $statusMessage;
 
     /**

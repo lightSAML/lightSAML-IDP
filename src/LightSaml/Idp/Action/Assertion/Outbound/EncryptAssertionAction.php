@@ -27,7 +27,7 @@ use Psr\Log\LoggerInterface;
 
 class EncryptAssertionAction extends AbstractAssertionAction
 {
-    /** @var  CredentialResolverInterface */
+    /** @var CredentialResolverInterface */
     protected $credentialResolver;
 
     /**

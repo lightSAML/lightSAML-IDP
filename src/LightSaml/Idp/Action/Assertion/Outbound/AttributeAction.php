@@ -22,7 +22,7 @@ use Psr\Log\LoggerInterface;
  */
 class AttributeAction extends AbstractAssertionAction
 {
-    /** @var  AttributeValueProviderInterface */
+    /** @var AttributeValueProviderInterface */
     protected $attributeValueProvider;
 
     /**

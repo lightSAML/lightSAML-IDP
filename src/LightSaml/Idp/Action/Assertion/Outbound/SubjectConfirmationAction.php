@@ -25,10 +25,10 @@ use Psr\Log\LoggerInterface;
  */
 class SubjectConfirmationAction extends AbstractAssertionAction
 {
-    /** @var  TimeProviderInterface */
+    /** @var TimeProviderInterface */
     protected $timeProvider;
 
-    /** @var  int */
+    /** @var int */
     protected $expirationSeconds;
 
     /**

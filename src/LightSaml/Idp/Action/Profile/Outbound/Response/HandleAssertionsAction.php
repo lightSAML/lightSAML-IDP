@@ -26,7 +26,7 @@ use Psr\Log\LoggerInterface;
  */
 class HandleAssertionsAction extends AbstractProfileAction implements CompositeActionInterface
 {
-    /** @var  ActionInterface[] */
+    /** @var ActionInterface[] */
     protected $assertionActions;
 
     /**

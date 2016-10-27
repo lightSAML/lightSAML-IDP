@@ -23,10 +23,10 @@ use Psr\Log\LoggerInterface;
  */
 class ConditionsAction extends AbstractAssertionAction
 {
-    /** @var  TimeProviderInterface */
+    /** @var TimeProviderInterface */
     protected $timeProvider;
 
-    /** @var  int */
+    /** @var int */
     protected $expirationSeconds;
 
     /**

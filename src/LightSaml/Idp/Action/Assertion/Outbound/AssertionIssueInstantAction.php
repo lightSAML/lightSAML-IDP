@@ -19,7 +19,7 @@ use Psr\Log\LoggerInterface;
 
 class AssertionIssueInstantAction extends AbstractAssertionAction
 {
-    /** @var  TimeProviderInterface */
+    /** @var TimeProviderInterface */
     protected $timeProvider;
 
     /**

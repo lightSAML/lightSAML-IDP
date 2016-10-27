@@ -25,7 +25,7 @@ use Psr\Log\LoggerInterface;
  */
 class AuthnStatementAction extends AbstractAssertionAction
 {
-    /** @var  SessionInfoProviderInterface */
+    /** @var SessionInfoProviderInterface */
     protected $sessionInfoProvider;
 
     /**

@@ -22,7 +22,7 @@ use Psr\Log\LoggerInterface;
  */
 class SignAssertionAction extends AbstractAssertionAction
 {
-    /** @var  SignatureResolverInterface */
+    /** @var SignatureResolverInterface */
     protected $signatureResolver;
 
     /**
