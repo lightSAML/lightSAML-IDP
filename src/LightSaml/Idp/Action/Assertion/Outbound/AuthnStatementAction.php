@@ -17,6 +17,7 @@ use LightSaml\Model\Assertion\AuthnContext;
 use LightSaml\Model\Assertion\AuthnStatement;
 use LightSaml\Model\Assertion\SubjectLocality;
 use LightSaml\Provider\Session\SessionInfoProviderInterface;
+use LightSaml\SamlConstants;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -46,12 +47,17 @@ class AuthnStatementAction extends AbstractAssertionAction
     protected function doExecute(AssertionContext $context)
     {
         $authnContext = new AuthnContext();
-        $authnContext->setAuthnContextClassRef($this->sessionInfoProvider->getAuthnContextClassRef());
+        $authnContextClassRef = $this->sessionInfoProvider->getAuthnContextClassRef() ?: SamlConstants::AUTHN_CONTEXT_UNSPECIFIED;
+        $authnContext->setAuthnContextClassRef($authnContextClassRef);
 
         $authnStatement = new AuthnStatement();
         $authnStatement->setAuthnContext($authnContext);
-        $authnStatement->setSessionIndex($this->sessionInfoProvider->getSessionIndex());
-        $authnStatement->setAuthnInstant($this->sessionInfoProvider->getAuthnInstant());
+        $sessionIndex = $this->sessionInfoProvider->getSessionIndex();
+        if ($sessionIndex) {
+            $authnStatement->setSessionIndex($sessionIndex);
+        }
+        $authnInstant = $this->sessionInfoProvider->getAuthnInstant() ?: new \DateTime();
+        $authnStatement->setAuthnInstant($authnInstant);
 
         $subjectLocality = new SubjectLocality();
         $subjectLocality->setAddress($context->getProfileContext()->getHttpRequest()->getClientIp());
