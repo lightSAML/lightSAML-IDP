@@ -81,7 +81,10 @@ class EncryptAssertionAction extends AbstractAssertionAction
             throw new LightSamlContextException($context, 'Credential resolved for assertion encryption does not have a public key');
         }
 
-        $encryptedAssertionWriter = new EncryptedAssertionWriter();
+        $encryptedAssertionWriter = new EncryptedAssertionWriter(
+            $trustOptions->getBlockEncryptionAlgorithm(),
+            $trustOptions->getKeyTransportEncryptionAlgorithm()
+        );
         $encryptedAssertionWriter->encrypt($assertion, $credential->getPublicKey());
 
         $context->setEncryptedAssertion($encryptedAssertionWriter);
