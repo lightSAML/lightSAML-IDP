@@ -11,7 +11,7 @@
     },
     "require": {
         "php": ">=5.5.1",
-        "lightsaml/lightsaml": "~1.1.4"
+        "lightsaml/lightsaml": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.8",
