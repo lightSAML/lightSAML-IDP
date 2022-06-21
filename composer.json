@@ -11,6 +11,12 @@
     },
     "authors": [
         {
+            "name": "Milos Tomic",
+            "email": "tmilos@gmail.com",
+            "homepage": "http://github.com/tmilos",
+            "role": "Developer"
+        },
+        {
             "name": "Takieddine Messaoudi",
             "email": "tmessaoudi@smart-team.tn",
             "homepage": "https://www.smart-team.tn",
