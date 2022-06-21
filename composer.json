@@ -9,12 +9,20 @@
             "LightSaml\\Idp\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "Takieddine Messaoudi",
+            "email": "tmessaoudi@smart-team.tn",
+            "homepage": "https://www.smart-team.tn",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "php": ">=5.5.1",
-        "lightsaml/lightsaml": "^1.4|^2.0"
+        "php": ">=7.2.5",
+        "litesaml/lightsaml": "^3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.8",
+        "phpunit/phpunit": "~8.4|~9.5",
         "satooshi/php-coveralls": "~0.6"
     },
     "config": {

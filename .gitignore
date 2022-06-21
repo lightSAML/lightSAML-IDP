@@ -41,3 +41,5 @@
 /composer.lock
 /*.phar
 /*.cache
+
+/.idea
